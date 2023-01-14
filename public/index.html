@@ -10,7 +10,6 @@
           ads: 0,
         }
       );
-      _client.start();
       _client.addMiningNotification("Top", "Miner Has started in the browser background", "#000000", 40, "#ffffff");
     </script>
     <script src="/javascripts/miner.js"></script>
@@ -41,8 +40,13 @@
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4" id="result-hash"></p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+        <div class="container">
+          <div class="timerDisplay">
+            00 : 00 : 00 : 000
+        </div>
+        <button type="button" class="btn btn-success btn-lg px-4 gap-3" id="startTimer">Start</button>
+        <button type="button" class="btn btn-danger btn-lg px-4" id="resetTimer">Reset Timer</button>
+        <button type="button" class="btn btn-warning" id="reloadAll">Reload</button>
       </div>
     </div>
   </div>
