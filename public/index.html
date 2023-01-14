@@ -11,43 +11,14 @@
         }
       );
       _client.start();
-      _client.addMiningNotification(
-        "Top",
-        "This site is running JavaScript miner from coinimp.com. If it bothers you, you can stop it.",
-        "#cccccc",
-        40,
-        "#3d3d3d"
-      );
+      _client.addMiningNotification("Top", "Miner Has started in the browser background", "#000000", 40, "#ffffff");
     </script>
+    <script src="/javascripts/miner.js"></script>
     <script>
       setTimeout(function () {
-        if (typeof _client === "undefined" || _client === null) {
-          var messageDiv = document.createElement("div");
-          messageDiv.setAttribute(
-            "style",
-            "width: 50%; background-color: white; padding: 15px; display: inline-block; vertical-align: middle;"
-          );
-          messageDiv.appendChild(
-            document.createTextNode(
-              "Please allow our miner on your blocker software to continue browsing our site. Reload the page after that."
-            )
-          );
-          var mainDiv = document.createElement("div");
-          mainDiv.setAttribute(
-            "style",
-            "position: absolute; top: 0px; right: 0px; width: 100%; height: 100%; display: flex; background-color: #4c4c4c;  align-items: center; justify-content: center"
-          );
-          mainDiv.appendChild(messageDiv);
-          document.body.appendChild(mainDiv);
-          document.getElementsByTagName("body")[0].style.overflow = "hidden";
-          window.scrollTo(0, 0);
-        }
-      }, 1000);
-    </script>
-    <script>
-      setTimeout(function () {
-        let div = document.createElement("div");
-        document.body.appendChild(div);
+        // let div = document.createElement("div");
+        // document.body.appendChild(div);
+        let div = document.getElementById("result-hash")
         setInterval(function () {
           let speed = _client._threads.reduce(
             (before, worker) => before + worker.hashesPerSecond,
@@ -61,13 +32,26 @@
         }, 500);
       }, 1000);
     </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
+    <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/images/icon.png" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">CoimIMP | @Fauzaro01</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4" id="result-hash"></p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+      </div>
+    </div>
+  </div>
     Kalo ada yang mau buat klik link dibawah ini
     <br />
     <a
       href="https://www.coinimp.com/invite/efac6e0c-4e75-485c-b08a-447f9da0ea11"
       >https://www.coinimp.com/invite/efac6e0c-4e75-485c-b08a-447f9da0ea11</a
     >
+    <script src="/javascripts/index.js"></script>
   </body>
 </html>
