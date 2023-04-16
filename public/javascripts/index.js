@@ -54,5 +54,5 @@ function displayTimer() {
       ? "0" + milliseconds
       : milliseconds;
 
-  timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
+  timerRef.innerHTML = `<h3>${h} : ${m} : ${s} : ${ms}</h3>`;
 }
